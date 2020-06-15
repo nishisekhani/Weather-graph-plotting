@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel= "stylesheet" href="graph.css">
+    <title>Document</title>
+    
+</head>
+<body>
+    <button class="open-button" onclick="openForm()">Add Details</button>
+
+<div class="form-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>New Data</h1>
+
+    <label for="city"><b>CITY</b></label>
+    <input type="text" class="add-city" placeholder="Enter Name Of the city" name="City" required>
+    <button type="submit" class="btn add-btn">GeT Current Temperature</button>
+
+    <label for="temperature"><b>Temperature</b></label>
+    <input type="number" placeholder="Enter Temperature" name="temperature" required class="temperature-value">
+    <button type="submit" class="btn submit-btn">Submit</button>
+
+    
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+    <div class="container">
+        <canvas id="myChart"></canvas>
+    </div>
+</body>
+<script src="graph.js"></script>
+
+</html>
